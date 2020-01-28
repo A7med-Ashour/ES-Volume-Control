@@ -1,0 +1,469 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"39 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\ADC.c
+[e E891 . `uc
+ADC_CH0 0
+ADC_CH1 1
+ADC_CH2 2
+ADC_CH3 3
+ADC_CH4 4
+ADC_CH5 5
+ADC_CH6 6
+ADC_CH7 7
+]
+"56 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\SLIDER.c
+[e E895 . `uc
+ADC_CH0 0
+ADC_CH1 1
+ADC_CH2 2
+ADC_CH3 3
+ADC_CH4 4
+ADC_CH5 5
+ADC_CH6 6
+ADC_CH7 7
+]
+"24 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\DISPLAY.c
+[e E893 . `uc
+LCD_4_MODE 0
+LCD_8_MODE 1
+]
+"26
+[e E897 . `uc
+L1 0
+L2 1
+]
+[e E901 . `uc
+C1 0
+C2 1
+C3 2
+C4 3
+C5 4
+C6 5
+C7 6
+C8 7
+C9 8
+C10 9
+C11 10
+C12 11
+C13 12
+C14 13
+C15 14
+C16 15
+]
+"17 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\VolumeControl.c
+[e E897 . `uc
+T0_PRESCALLER_2 0
+T0_PRESCALLER_4 1
+T0_PRESCALLER_8 2
+T0_PRESCALLER_16 3
+T0_PRESCALLER_32 4
+T0_PRESCALLER_64 5
+T0_PRESCALLER_128 6
+T0_PRESCALLER_256 7
+]
+[e E907 . `uc
+T0_TIMER_MODE 0
+T0_COUNTER_MODE 1
+]
+[e E915 . `uc
+T0_OVF_ENABLE 0
+T0_OVF_DISABLE 1
+]
+"23
+[e E911 . `uc
+T0_ON 0
+T0_OFF 1
+]
+"9 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\TIMER0.c
+[e E891 . `uc
+T0_PRESCALLER_2 0
+T0_PRESCALLER_4 1
+T0_PRESCALLER_8 2
+T0_PRESCALLER_16 3
+T0_PRESCALLER_32 4
+T0_PRESCALLER_64 5
+T0_PRESCALLER_128 6
+T0_PRESCALLER_256 7
+]
+[e E901 . `uc
+T0_TIMER_MODE 0
+T0_COUNTER_MODE 1
+]
+[e E909 . `uc
+T0_OVF_ENABLE 0
+T0_OVF_DISABLE 1
+]
+"18
+[e E905 . `uc
+T0_ON 0
+T0_OFF 1
+]
+"66 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\LCD.c
+[e E891 . `uc
+LCD_4_MODE 0
+LCD_8_MODE 1
+]
+"149
+[e E895 . `uc
+L1 0
+L2 1
+]
+[e E899 . `uc
+C1 0
+C2 1
+C3 2
+C4 3
+C5 4
+C6 5
+C7 6
+C8 7
+C9 8
+C10 9
+C11 10
+C12 11
+C13 12
+C14 13
+C15 14
+C16 15
+]
+"19 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\ADC.c
+[v _ADC_init ADC_init `(v  1 e 1 0 ]
+"39
+[v _ADC_read ADC_read `(v  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"21 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\DISPLAY.c
+[v _DSP_init DSP_init `(v  1 e 1 0 ]
+"29
+[v _DSP_update DSP_update `(v  1 e 1 0 ]
+"82 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\LCD.c
+[v _LCD_init LCD_init `(v  1 e 1 0 ]
+"149
+[v _LCD_char LCD_char `(v  1 e 1 0 ]
+[v i1_LCD_char LCD_char `(v  1 e 1 0 ]
+"161
+[v _LCD_str LCD_str `(v  1 e 1 0 ]
+[v i1_LCD_str LCD_str `(v  1 e 1 0 ]
+"201
+[v _LCD_cmd LCD_cmd `(v  1 s 1 LCD_cmd ]
+[v i1_LCD_cmd LCD_cmd `(v  1 s 1 i1_LCD_cmd ]
+"211
+[v _LCD_goTo LCD_goTo `(v  1 s 1 LCD_goTo ]
+[v i1_LCD_goTo LCD_goTo `(v  1 s 1 i1_LCD_goTo ]
+"221
+[v _LCD_latch LCD_latch `(v  1 s 1 LCD_latch ]
+[v i1_LCD_latch LCD_latch `(v  1 s 1 i1_LCD_latch ]
+"232
+[v _LCD_out LCD_out `(v  1 s 1 LCD_out ]
+[v i1_LCD_out LCD_out `(v  1 s 1 i1_LCD_out ]
+"269
+[v _Convert_IntToString Convert_IntToString `(v  1 s 1 Convert_IntToString ]
+"28 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\SLIDER.c
+[v _SLIDER_init SLIDER_init `(v  1 e 1 0 ]
+"36
+[v _SLIDER_getVal SLIDER_getVal `(v  1 e 1 0 ]
+"42
+[v _SLIDER_update SLIDER_update `(v  1 e 1 0 ]
+"9 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\TIMER0.c
+[v _timer0_init timer0_init `(v  1 e 1 0 ]
+"32
+[v _timer0_reload timer0_reload `(v  1 e 1 0 ]
+[v i1_timer0_reload timer0_reload `(v  1 e 1 0 ]
+"40
+[v _T0_timer_mode_state T0_timer_mode_state `(v  1 e 1 0 ]
+"55
+[v _T0_counter_mode_state T0_counter_mode_state `(v  1 e 1 0 ]
+"71
+[v _timer0_set_prescaller timer0_set_prescaller `(v  1 s 1 timer0_set_prescaller ]
+"104
+[v _timer0_set_mode timer0_set_mode `(v  1 s 1 timer0_set_mode ]
+"119
+[v _timer0_ovf_setState timer0_ovf_setState `(v  1 s 1 timer0_ovf_setState ]
+"15 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\VolumeControl.c
+[v _main main `(v  1 e 1 0 ]
+"32
+[v _ISR ISR `II(v  1 e 1 0 ]
+"1152 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"2222
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"66 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\LCD.c
+[v _currentMode currentMode `E891  1 s 1 currentMode ]
+"22 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\SLIDER.c
+[v _SLIDER_val SLIDER_val `us  1 s 2 SLIDER_val ]
+"15 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\VolumeControl.c
+[v _main main `(v  1 e 1 0 ]
+{
+"30
+} 0
+"9 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\TIMER0.c
+[v _timer0_init timer0_init `(v  1 e 1 0 ]
+{
+[v timer0_init@p p `E891  1 a 1 wreg ]
+[v timer0_init@p p `E891  1 a 1 wreg ]
+[v timer0_init@m m `E901  1 p 1 23 ]
+[v timer0_init@o o `E909  1 p 1 24 ]
+[v timer0_init@p p `E891  1 a 1 0 ]
+"30
+} 0
+"71
+[v _timer0_set_prescaller timer0_set_prescaller `(v  1 s 1 timer0_set_prescaller ]
+{
+[v timer0_set_prescaller@p p `E891  1 a 1 wreg ]
+[v timer0_set_prescaller@p p `E891  1 a 1 wreg ]
+[v timer0_set_prescaller@p p `E891  1 a 1 22 ]
+"102
+} 0
+"104
+[v _timer0_set_mode timer0_set_mode `(v  1 s 1 timer0_set_mode ]
+{
+[v timer0_set_mode@m m `E901  1 a 1 wreg ]
+[v timer0_set_mode@m m `E901  1 a 1 wreg ]
+[v timer0_set_mode@m m `E901  1 a 1 22 ]
+"117
+} 0
+"32
+[v _timer0_reload timer0_reload `(v  1 e 1 0 ]
+{
+[v timer0_reload@val val `uc  1 a 1 wreg ]
+[v timer0_reload@val val `uc  1 a 1 wreg ]
+"34
+[v timer0_reload@val val `uc  1 a 1 21 ]
+"35
+} 0
+"119
+[v _timer0_ovf_setState timer0_ovf_setState `(v  1 s 1 timer0_ovf_setState ]
+{
+[v timer0_ovf_setState@o o `E909  1 a 1 wreg ]
+[v timer0_ovf_setState@o o `E909  1 a 1 wreg ]
+[v timer0_ovf_setState@o o `E909  1 a 1 22 ]
+"132
+} 0
+"40
+[v _T0_timer_mode_state T0_timer_mode_state `(v  1 e 1 0 ]
+{
+[v T0_timer_mode_state@s s `E905  1 a 1 wreg ]
+[v T0_timer_mode_state@s s `E905  1 a 1 wreg ]
+[v T0_timer_mode_state@s s `E905  1 a 1 22 ]
+"53
+} 0
+"55
+[v _T0_counter_mode_state T0_counter_mode_state `(v  1 e 1 0 ]
+{
+[v T0_counter_mode_state@s s `E905  1 a 1 wreg ]
+[v T0_counter_mode_state@s s `E905  1 a 1 wreg ]
+[v T0_counter_mode_state@s s `E905  1 a 1 22 ]
+"69
+} 0
+"28 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\SLIDER.c
+[v _SLIDER_init SLIDER_init `(v  1 e 1 0 ]
+{
+"34
+} 0
+"19 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\ADC.c
+[v _ADC_init ADC_init `(v  1 e 1 0 ]
+{
+"38
+} 0
+"21 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\DISPLAY.c
+[v _DSP_init DSP_init `(v  1 e 1 0 ]
+{
+"27
+} 0
+"161 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\LCD.c
+[v _LCD_str LCD_str `(v  1 e 1 0 ]
+{
+[v LCD_str@str str `*.26uc  1 p 2 9 ]
+[v LCD_str@line line `E895  1 p 1 11 ]
+[v LCD_str@col col `E899  1 p 1 12 ]
+"168
+} 0
+"149
+[v _LCD_char LCD_char `(v  1 e 1 0 ]
+{
+[v LCD_char@ch ch `uc  1 a 1 wreg ]
+[v LCD_char@ch ch `uc  1 a 1 wreg ]
+[v LCD_char@line line `E895  1 p 1 5 ]
+[v LCD_char@col col `E899  1 p 1 6 ]
+"152
+[v LCD_char@ch ch `uc  1 a 1 8 ]
+"159
+} 0
+"211
+[v _LCD_goTo LCD_goTo `(v  1 s 1 LCD_goTo ]
+{
+[v LCD_goTo@line line `E895  1 a 1 wreg ]
+"214
+[v LCD_goTo@address address `uc  1 a 1 4 ]
+"211
+[v LCD_goTo@line line `E895  1 a 1 wreg ]
+[v LCD_goTo@col col `E899  1 p 1 0 ]
+"216
+[v LCD_goTo@line line `E895  1 a 1 3 ]
+"219
+} 0
+"82
+[v _LCD_init LCD_init `(v  1 e 1 0 ]
+{
+[v LCD_init@mode mode `E891  1 a 1 wreg ]
+[v LCD_init@mode mode `E891  1 a 1 wreg ]
+"85
+[v LCD_init@mode mode `E891  1 a 1 2 ]
+"147
+} 0
+"201
+[v _LCD_cmd LCD_cmd `(v  1 s 1 LCD_cmd ]
+{
+[v LCD_cmd@cmd cmd `uc  1 a 1 wreg ]
+[v LCD_cmd@cmd cmd `uc  1 a 1 wreg ]
+"205
+[v LCD_cmd@cmd cmd `uc  1 a 1 26 ]
+"209
+} 0
+"232
+[v _LCD_out LCD_out `(v  1 s 1 LCD_out ]
+{
+[v LCD_out@data data `uc  1 a 1 wreg ]
+[v LCD_out@data data `uc  1 a 1 wreg ]
+"234
+[v LCD_out@data data `uc  1 a 1 24 ]
+"267
+} 0
+"221
+[v _LCD_latch LCD_latch `(v  1 s 1 LCD_latch ]
+{
+"230
+} 0
+"32 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\VolumeControl.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"43
+} 0
+"32 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\TIMER0.c
+[v i1_timer0_reload timer0_reload `(v  1 e 1 0 ]
+{
+[v i1timer0_reload@val val `uc  1 a 1 wreg ]
+[v i1timer0_reload@val val `uc  1 a 1 wreg ]
+"34
+[v i1timer0_reload@val val `uc  1 a 1 1 ]
+"35
+} 0
+"42 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\SLIDER.c
+[v _SLIDER_update SLIDER_update `(v  1 e 1 0 ]
+{
+"44
+[v SLIDER_update@SLIDER_counter SLIDER_counter `uc  1 s 1 SLIDER_counter ]
+"58
+} 0
+"39 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\ADC.c
+[v _ADC_read ADC_read `(v  1 e 1 0 ]
+{
+[v ADC_read@ch ch `E891  1 a 1 wreg ]
+[v ADC_read@ch ch `E891  1 a 1 wreg ]
+[v ADC_read@pval pval `*.4us  1 p 1 0 ]
+"42
+[v ADC_read@ch ch `E891  1 a 1 3 ]
+"63
+} 0
+"29 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\DISPLAY.c
+[v _DSP_update DSP_update `(v  1 e 1 0 ]
+{
+"33
+[v DSP_update@i i `us  1 a 2 11 ]
+"34
+[v DSP_update@slider slider `us  1 a 2 9 ]
+"31
+[v DSP_update@DSP_counter DSP_counter `uc  1 s 1 DSP_counter ]
+"32
+[v DSP_update@str str `[17]uc  1 s 17 str ]
+"64
+} 0
+"161 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\LCD.c
+[v i1_LCD_str LCD_str `(v  1 e 1 0 ]
+{
+[v i1LCD_str@str str `*.26uc  1 p 2 2 ]
+[v i1LCD_str@line line `E895  1 p 1 4 ]
+[v i1LCD_str@col col `E899  1 p 1 5 ]
+"168
+} 0
+"149
+[v i1_LCD_char LCD_char `(v  1 e 1 0 ]
+{
+[v i1LCD_char@ch ch `uc  1 a 1 wreg ]
+[v i1LCD_char@ch ch `uc  1 a 1 wreg ]
+[v i1LCD_char@line line `E895  1 p 1 12 ]
+[v i1LCD_char@col col `E899  1 p 1 13 ]
+"152
+[v i1LCD_char@ch ch `uc  1 a 1 1 ]
+"159
+} 0
+"211
+[v i1_LCD_goTo LCD_goTo `(v  1 s 1 i1_LCD_goTo ]
+{
+[v i1LCD_goTo@line line `E895  1 a 1 wreg ]
+[v i1LCD_goTo@address LCD_goTo `uc  1 a 1 11 ]
+[v i1LCD_goTo@line line `E895  1 a 1 wreg ]
+[v i1LCD_goTo@col col `E899  1 p 1 7 ]
+"216
+[v i1LCD_goTo@line line `E895  1 a 1 10 ]
+"219
+} 0
+"201
+[v i1_LCD_cmd LCD_cmd `(v  1 s 1 i1_LCD_cmd ]
+{
+[v i1LCD_cmd@cmd cmd `uc  1 a 1 wreg ]
+[v i1LCD_cmd@cmd cmd `uc  1 a 1 wreg ]
+"205
+[v i1LCD_cmd@cmd cmd `uc  1 a 1 6 ]
+"209
+} 0
+"232
+[v i1_LCD_out LCD_out `(v  1 s 1 i1_LCD_out ]
+{
+[v i1LCD_out@data data `uc  1 a 1 wreg ]
+[v i1LCD_out@data data `uc  1 a 1 wreg ]
+"234
+[v i1LCD_out@data data `uc  1 a 1 4 ]
+"267
+} 0
+"221
+[v i1_LCD_latch LCD_latch `(v  1 s 1 i1_LCD_latch ]
+{
+"230
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"36 D:\to pc\My Embedded\PIC16F877A\Camp\Project\VolumeControl.X\SLIDER.c
+[v _SLIDER_getVal SLIDER_getVal `(v  1 e 1 0 ]
+{
+[v SLIDER_getVal@pVal pVal `*.4us  1 a 1 wreg ]
+[v SLIDER_getVal@pVal pVal `*.4us  1 a 1 wreg ]
+"38
+[v SLIDER_getVal@pVal pVal `*.4us  1 a 1 0 ]
+"40
+} 0

@@ -1,0 +1,652 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"9 TIMER0.c
+[; ;TIMER0.c: 9: void timer0_init(tTMR0_Prescaller p,tTMR0_Mode m, tTMR0_OVF_State o){
+[c E891 0 1 2 3 4 5 6 7 .. ]
+[n E891 . T0_PRESCALLER_2 T0_PRESCALLER_4 T0_PRESCALLER_8 T0_PRESCALLER_16 T0_PRESCALLER_32 T0_PRESCALLER_64 T0_PRESCALLER_128 T0_PRESCALLER_256  ]
+[c E901 0 1 .. ]
+[n E901 . T0_TIMER_MODE T0_COUNTER_MODE  ]
+[c E909 0 1 .. ]
+[n E909 . T0_OVF_ENABLE T0_OVF_DISABLE  ]
+"3
+[; ;TIMER0.c: 3: static void timer0_set_prescaller(tTMR0_Prescaller);
+[v _timer0_set_prescaller `(v ~T0 @X0 0 sf1`E891 ]
+"5
+[; ;TIMER0.c: 5: static void timer0_set_mode(tTMR0_Mode);
+[v _timer0_set_mode `(v ~T0 @X0 0 sf1`E901 ]
+"7
+[; ;TIMER0.c: 7: static void timer0_ovf_setState(tTMR0_OVF_State);
+[v _timer0_ovf_setState `(v ~T0 @X0 0 sf1`E909 ]
+"18
+[; ;TIMER0.c: 18:             T0_timer_mode_state(T0_OFF);
+[c E905 0 1 .. ]
+[n E905 . T0_ON T0_OFF  ]
+"41 ./TIMER0.h
+[; ;./TIMER0.h: 41: void T0_timer_mode_state(tTMR0_State);
+[v _T0_timer_mode_state `(v ~T0 @X0 0 ef1`E905 ]
+"42
+[; ;./TIMER0.h: 42: void T0_counter_mode_state(tTMR0_State);
+[v _T0_counter_mode_state `(v ~T0 @X0 0 ef1`E905 ]
+"39
+[; ;./TIMER0.h: 39: void timer0_reload(TMR0_SIZE);
+[v _timer0_reload `(v ~T0 @X0 0 ef1`uc ]
+"33 ./MICRO_CONTROLLER.h
+[; ;./MICRO_CONTROLLER.h: 33:     struct{
+[s S96 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S96 . BIT0 BIT1 BIT2 BIT3 BIT4 BIT5 BIT6 BIT7 ]
+"31
+[; ;./MICRO_CONTROLLER.h: 31: typedef union {
+[u S95 `uc 1 `S96 1 ]
+[n S95 . Reg Bits ]
+"5 ./config.h
+[p x FOSC = HS ]
+"6
+[p x WDTE = OFF ]
+"7
+[p x PWRTE = ON ]
+"8
+[p x BOREN = ON ]
+"9
+[p x LVP = OFF ]
+"10
+[p x CPD = OFF ]
+"11
+[p x WRT = OFF ]
+"12
+[p x CP = OFF ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"9 TIMER0.c
+[; ;TIMER0.c: 9: void timer0_init(tTMR0_Prescaller p,tTMR0_Mode m, tTMR0_OVF_State o){
+[v _timer0_init `(v ~T0 @X0 1 ef3`E891`E901`E909 ]
+{
+[e :U _timer0_init ]
+[v _p `E891 ~T0 @X0 1 r1 ]
+[v _m `E901 ~T0 @X0 1 r2 ]
+[v _o `E909 ~T0 @X0 1 r3 ]
+[f ]
+"10
+[; ;TIMER0.c: 10:     timer0_set_prescaller(p);
+[e ( _timer0_set_prescaller (1 _p ]
+"12
+[; ;TIMER0.c: 12:     timer0_set_mode(m);
+[e ( _timer0_set_mode (1 _m ]
+"14
+[; ;TIMER0.c: 14:     timer0_ovf_setState(o);
+[e ( _timer0_ovf_setState (1 _o ]
+"16
+[; ;TIMER0.c: 16:     switch(m){
+[e $U 101  ]
+{
+"17
+[; ;TIMER0.c: 17:         case T0_TIMER_MODE :
+[e :U 102 ]
+"18
+[; ;TIMER0.c: 18:             T0_timer_mode_state(T0_OFF);
+[e ( _T0_timer_mode_state (1 . `E905 1 ]
+"19
+[; ;TIMER0.c: 19:             break;
+[e $U 100  ]
+"20
+[; ;TIMER0.c: 20:         case T0_COUNTER_MODE :
+[e :U 103 ]
+"21
+[; ;TIMER0.c: 21:             T0_counter_mode_state(T0_OFF);
+[e ( _T0_counter_mode_state (1 . `E905 1 ]
+"22
+[; ;TIMER0.c: 22:             break;
+[e $U 100  ]
+"23
+[; ;TIMER0.c: 23:         default :
+[e :U 104 ]
+"25
+[; ;TIMER0.c: 25:             break;
+[e $U 100  ]
+"26
+[; ;TIMER0.c: 26:     }
+}
+[e $U 100  ]
+[e :U 101 ]
+[e [\ -> _m `ui , $ -> . `E901 0 `ui 102
+ , $ -> . `E901 1 `ui 103
+ 104 ]
+[e :U 100 ]
+"28
+[; ;TIMER0.c: 28:     timer0_reload((0xFF));
+[e ( _timer0_reload (1 -> -> 255 `i `uc ]
+"30
+[; ;TIMER0.c: 30: }
+[e :UE 99 ]
+}
+"32
+[; ;TIMER0.c: 32: void timer0_reload(TMR0_SIZE val){
+[v _timer0_reload `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _timer0_reload ]
+[v _val `uc ~T0 @X0 1 r1 ]
+[f ]
+"34
+[; ;TIMER0.c: 34:     ((*((volatile tRegister8 *)(0x01))).Reg) = val;
+[e = . *U -> -> 1 `i `*VS95 0 _val ]
+"35
+[; ;TIMER0.c: 35: }
+[e :UE 105 ]
+}
+"36
+[; ;TIMER0.c: 36: TMR0_SIZE timer0_getValue(void){
+[v _timer0_getValue `(uc ~T0 @X0 1 ef ]
+{
+[e :U _timer0_getValue ]
+[f ]
+"38
+[; ;TIMER0.c: 38:     return ((*((volatile tRegister8 *)(0x01))).Reg);
+[e ) . *U -> -> 1 `i `*VS95 0 ]
+[e $UE 106  ]
+"39
+[; ;TIMER0.c: 39: }
+[e :UE 106 ]
+}
+"40
+[; ;TIMER0.c: 40: void T0_timer_mode_state(tTMR0_State s){
+[v _T0_timer_mode_state `(v ~T0 @X0 1 ef1`E905 ]
+{
+[e :U _T0_timer_mode_state ]
+[v _s `E905 ~T0 @X0 1 r1 ]
+[f ]
+"42
+[; ;TIMER0.c: 42:     switch(s) {
+[e $U 109  ]
+{
+"43
+[; ;TIMER0.c: 43:         case T0_ON :
+[e :U 110 ]
+"44
+[; ;TIMER0.c: 44:             (((*((volatile tRegister8 *)(0x81))).Bits.BIT5) = 0);
+[e = . . *U -> -> 129 `i `*VS95 1 5 -> -> 0 `i `uc ]
+"45
+[; ;TIMER0.c: 45:             break;
+[e $U 108  ]
+"46
+[; ;TIMER0.c: 46:         case T0_OFF :
+[e :U 111 ]
+"47
+[; ;TIMER0.c: 47:             (((*((volatile tRegister8 *)(0x81))).Bits.BIT5) = 1);
+[e = . . *U -> -> 129 `i `*VS95 1 5 -> -> 1 `i `uc ]
+"48
+[; ;TIMER0.c: 48:             break;
+[e $U 108  ]
+"49
+[; ;TIMER0.c: 49:         default:
+[e :U 112 ]
+"51
+[; ;TIMER0.c: 51:             break;
+[e $U 108  ]
+"52
+[; ;TIMER0.c: 52:     }
+}
+[e $U 108  ]
+[e :U 109 ]
+[e [\ -> _s `ui , $ -> . `E905 0 `ui 110
+ , $ -> . `E905 1 `ui 111
+ 112 ]
+[e :U 108 ]
+"53
+[; ;TIMER0.c: 53: }
+[e :UE 107 ]
+}
+"55
+[; ;TIMER0.c: 55: void T0_counter_mode_state(tTMR0_State s){
+[v _T0_counter_mode_state `(v ~T0 @X0 1 ef1`E905 ]
+{
+[e :U _T0_counter_mode_state ]
+[v _s `E905 ~T0 @X0 1 r1 ]
+[f ]
+"58
+[; ;TIMER0.c: 58:     switch(s) {
+[e $U 115  ]
+{
+"59
+[; ;TIMER0.c: 59:         case T0_ON :
+[e :U 116 ]
+"60
+[; ;TIMER0.c: 60:             (((*((volatile tRegister8 *)(0x81))).Bits.BIT5) = 1);
+[e = . . *U -> -> 129 `i `*VS95 1 5 -> -> 1 `i `uc ]
+"61
+[; ;TIMER0.c: 61:             break;
+[e $U 114  ]
+"62
+[; ;TIMER0.c: 62:         case T0_OFF :
+[e :U 117 ]
+"63
+[; ;TIMER0.c: 63:             (((*((volatile tRegister8 *)(0x81))).Bits.BIT5) = 0);
+[e = . . *U -> -> 129 `i `*VS95 1 5 -> -> 0 `i `uc ]
+"64
+[; ;TIMER0.c: 64:             break;
+[e $U 114  ]
+"65
+[; ;TIMER0.c: 65:         default:
+[e :U 118 ]
+"67
+[; ;TIMER0.c: 67:             break;
+[e $U 114  ]
+"68
+[; ;TIMER0.c: 68:     }
+}
+[e $U 114  ]
+[e :U 115 ]
+[e [\ -> _s `ui , $ -> . `E905 0 `ui 116
+ , $ -> . `E905 1 `ui 117
+ 118 ]
+[e :U 114 ]
+"69
+[; ;TIMER0.c: 69: }
+[e :UE 113 ]
+}
+"71
+[; ;TIMER0.c: 71: static void timer0_set_prescaller(tTMR0_Prescaller p){
+[v _timer0_set_prescaller `(v ~T0 @X0 1 sf1`E891 ]
+{
+[e :U _timer0_set_prescaller ]
+[v _p `E891 ~T0 @X0 1 r1 ]
+[f ]
+"73
+[; ;TIMER0.c: 73:     switch(p){
+[e $U 121  ]
+{
+"74
+[; ;TIMER0.c: 74:         case T0_PRESCALLER_2:
+[e :U 122 ]
+"75
+[; ;TIMER0.c: 75:             ((*((volatile tRegister8 *)(0x81))).Bits.BIT3) = (0); ((*((volatile tRegister8 *)(0x81))).Bits.BIT0) = 0; ((*((volatile tRegister8 *)(0x81))).Bits.BIT1) = 0; ((*((volatile tRegister8 *)(0x81))).Bits.BIT2) = 0;
+[e = . . *U -> -> 129 `i `*VS95 1 3 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 0 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 1 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 2 -> -> 0 `i `uc ]
+"76
+[; ;TIMER0.c: 76:             break;
+[e $U 120  ]
+"77
+[; ;TIMER0.c: 77:         case T0_PRESCALLER_4:
+[e :U 123 ]
+"78
+[; ;TIMER0.c: 78:             ((*((volatile tRegister8 *)(0x81))).Bits.BIT3) = (0); ((*((volatile tRegister8 *)(0x81))).Bits.BIT0) = 1; ((*((volatile tRegister8 *)(0x81))).Bits.BIT1) = 0; ((*((volatile tRegister8 *)(0x81))).Bits.BIT2) = 0;
+[e = . . *U -> -> 129 `i `*VS95 1 3 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 0 -> -> 1 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 1 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 2 -> -> 0 `i `uc ]
+"79
+[; ;TIMER0.c: 79:             break;
+[e $U 120  ]
+"80
+[; ;TIMER0.c: 80:         case T0_PRESCALLER_8:
+[e :U 124 ]
+"81
+[; ;TIMER0.c: 81:             ((*((volatile tRegister8 *)(0x81))).Bits.BIT3) = (0); ((*((volatile tRegister8 *)(0x81))).Bits.BIT0) = 0; ((*((volatile tRegister8 *)(0x81))).Bits.BIT1) = 1; ((*((volatile tRegister8 *)(0x81))).Bits.BIT2) = 0;
+[e = . . *U -> -> 129 `i `*VS95 1 3 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 0 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 1 -> -> 1 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 2 -> -> 0 `i `uc ]
+"82
+[; ;TIMER0.c: 82:             break;
+[e $U 120  ]
+"83
+[; ;TIMER0.c: 83:         case T0_PRESCALLER_16:
+[e :U 125 ]
+"84
+[; ;TIMER0.c: 84:             ((*((volatile tRegister8 *)(0x81))).Bits.BIT3) = (0); ((*((volatile tRegister8 *)(0x81))).Bits.BIT0) = 1; ((*((volatile tRegister8 *)(0x81))).Bits.BIT1) = 1; ((*((volatile tRegister8 *)(0x81))).Bits.BIT2) = 0;
+[e = . . *U -> -> 129 `i `*VS95 1 3 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 0 -> -> 1 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 1 -> -> 1 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 2 -> -> 0 `i `uc ]
+"85
+[; ;TIMER0.c: 85:             break;
+[e $U 120  ]
+"86
+[; ;TIMER0.c: 86:         case T0_PRESCALLER_32:
+[e :U 126 ]
+"87
+[; ;TIMER0.c: 87:             ((*((volatile tRegister8 *)(0x81))).Bits.BIT3) = (0); ((*((volatile tRegister8 *)(0x81))).Bits.BIT0) = 0; ((*((volatile tRegister8 *)(0x81))).Bits.BIT1) = 0; ((*((volatile tRegister8 *)(0x81))).Bits.BIT2) = 1;
+[e = . . *U -> -> 129 `i `*VS95 1 3 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 0 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 1 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 2 -> -> 1 `i `uc ]
+"88
+[; ;TIMER0.c: 88:             break;
+[e $U 120  ]
+"89
+[; ;TIMER0.c: 89:         case T0_PRESCALLER_64:
+[e :U 127 ]
+"90
+[; ;TIMER0.c: 90:             ((*((volatile tRegister8 *)(0x81))).Bits.BIT3) = (0); ((*((volatile tRegister8 *)(0x81))).Bits.BIT0) = 1; ((*((volatile tRegister8 *)(0x81))).Bits.BIT1) = 0; ((*((volatile tRegister8 *)(0x81))).Bits.BIT2) = 1;
+[e = . . *U -> -> 129 `i `*VS95 1 3 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 0 -> -> 1 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 1 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 2 -> -> 1 `i `uc ]
+"91
+[; ;TIMER0.c: 91:             break;
+[e $U 120  ]
+"92
+[; ;TIMER0.c: 92:         case T0_PRESCALLER_128:
+[e :U 128 ]
+"93
+[; ;TIMER0.c: 93:             ((*((volatile tRegister8 *)(0x81))).Bits.BIT3) = (0); ((*((volatile tRegister8 *)(0x81))).Bits.BIT0) = 0; ((*((volatile tRegister8 *)(0x81))).Bits.BIT1) = 1; ((*((volatile tRegister8 *)(0x81))).Bits.BIT2) = 1;
+[e = . . *U -> -> 129 `i `*VS95 1 3 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 0 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 1 -> -> 1 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 2 -> -> 1 `i `uc ]
+"94
+[; ;TIMER0.c: 94:             break;
+[e $U 120  ]
+"95
+[; ;TIMER0.c: 95:         case T0_PRESCALLER_256:
+[e :U 129 ]
+"96
+[; ;TIMER0.c: 96:             ((*((volatile tRegister8 *)(0x81))).Bits.BIT3) = (0); ((*((volatile tRegister8 *)(0x81))).Bits.BIT0) = 1; ((*((volatile tRegister8 *)(0x81))).Bits.BIT1) = 1; ((*((volatile tRegister8 *)(0x81))).Bits.BIT2) = 1;
+[e = . . *U -> -> 129 `i `*VS95 1 3 -> -> 0 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 0 -> -> 1 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 1 -> -> 1 `i `uc ]
+[e = . . *U -> -> 129 `i `*VS95 1 2 -> -> 1 `i `uc ]
+"97
+[; ;TIMER0.c: 97:             break;
+[e $U 120  ]
+"98
+[; ;TIMER0.c: 98:         default :
+[e :U 130 ]
+"100
+[; ;TIMER0.c: 100:             break;
+[e $U 120  ]
+"101
+[; ;TIMER0.c: 101:     }
+}
+[e $U 120  ]
+[e :U 121 ]
+[e [\ -> _p `ui , $ -> . `E891 0 `ui 122
+ , $ -> . `E891 1 `ui 123
+ , $ -> . `E891 2 `ui 124
+ , $ -> . `E891 3 `ui 125
+ , $ -> . `E891 4 `ui 126
+ , $ -> . `E891 5 `ui 127
+ , $ -> . `E891 6 `ui 128
+ , $ -> . `E891 7 `ui 129
+ 130 ]
+[e :U 120 ]
+"102
+[; ;TIMER0.c: 102: }
+[e :UE 119 ]
+}
+"104
+[; ;TIMER0.c: 104: static void timer0_set_mode(tTMR0_Mode m){
+[v _timer0_set_mode `(v ~T0 @X0 1 sf1`E901 ]
+{
+[e :U _timer0_set_mode ]
+[v _m `E901 ~T0 @X0 1 r1 ]
+[f ]
+"106
+[; ;TIMER0.c: 106:     switch(m){
+[e $U 133  ]
+{
+"107
+[; ;TIMER0.c: 107:         case T0_TIMER_MODE:
+[e :U 134 ]
+"108
+[; ;TIMER0.c: 108:             (((*((volatile tRegister8 *)(0x81))).Bits.BIT5) = 0);
+[e = . . *U -> -> 129 `i `*VS95 1 5 -> -> 0 `i `uc ]
+"109
+[; ;TIMER0.c: 109:             break;
+[e $U 132  ]
+"110
+[; ;TIMER0.c: 110:         case T0_COUNTER_MODE :
+[e :U 135 ]
+"111
+[; ;TIMER0.c: 111:             (((*((volatile tRegister8 *)(0x81))).Bits.BIT5) = 1);
+[e = . . *U -> -> 129 `i `*VS95 1 5 -> -> 1 `i `uc ]
+"112
+[; ;TIMER0.c: 112:             break;
+[e $U 132  ]
+"113
+[; ;TIMER0.c: 113:         default :
+[e :U 136 ]
+"115
+[; ;TIMER0.c: 115:             break;
+[e $U 132  ]
+"116
+[; ;TIMER0.c: 116:     }
+}
+[e $U 132  ]
+[e :U 133 ]
+[e [\ -> _m `ui , $ -> . `E901 0 `ui 134
+ , $ -> . `E901 1 `ui 135
+ 136 ]
+[e :U 132 ]
+"117
+[; ;TIMER0.c: 117: }
+[e :UE 131 ]
+}
+"119
+[; ;TIMER0.c: 119: static void timer0_ovf_setState(tTMR0_OVF_State o ){
+[v _timer0_ovf_setState `(v ~T0 @X0 1 sf1`E909 ]
+{
+[e :U _timer0_ovf_setState ]
+[v _o `E909 ~T0 @X0 1 r1 ]
+[f ]
+"120
+[; ;TIMER0.c: 120:     switch(o){
+[e $U 139  ]
+{
+"121
+[; ;TIMER0.c: 121:         case T0_OVF_ENABLE :
+[e :U 140 ]
+"122
+[; ;TIMER0.c: 122:             ((*((volatile tRegister8 *)(0x0B))).Bits.BIT7 = 1);
+[e = . . *U -> -> 11 `i `*VS95 1 7 -> -> 1 `i `uc ]
+"123
+[; ;TIMER0.c: 123:             (((*((volatile tRegister8 *)(0x0B))).Bits.BIT5) = 1);
+[e = . . *U -> -> 11 `i `*VS95 1 5 -> -> 1 `i `uc ]
+"124
+[; ;TIMER0.c: 124:             break;
+[e $U 138  ]
+"125
+[; ;TIMER0.c: 125:         case T0_OVF_DISABLE :
+[e :U 141 ]
+"126
+[; ;TIMER0.c: 126:             (((*((volatile tRegister8 *)(0x0B))).Bits.BIT5) = 0);
+[e = . . *U -> -> 11 `i `*VS95 1 5 -> -> 0 `i `uc ]
+"127
+[; ;TIMER0.c: 127:             break;
+[e $U 138  ]
+"128
+[; ;TIMER0.c: 128:         default :
+[e :U 142 ]
+"130
+[; ;TIMER0.c: 130:             break;
+[e $U 138  ]
+"131
+[; ;TIMER0.c: 131:     }
+}
+[e $U 138  ]
+[e :U 139 ]
+[e [\ -> _o `ui , $ -> . `E909 0 `ui 140
+ , $ -> . `E909 1 `ui 141
+ 142 ]
+[e :U 138 ]
+"132
+[; ;TIMER0.c: 132: }
+[e :UE 137 ]
+}
